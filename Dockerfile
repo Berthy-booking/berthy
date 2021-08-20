@@ -1,7 +1,7 @@
 FROM node:lts-alpine as build-stage
 WORKDIR /app
-ENV VUE_APP_BERTHY_API https://127.0.0.1:5000/api/
-ENV VUE_APP_BERTHY_WEB_SOCKET wss://127.0.0.1:5000/socket
+ENV VUE_APP_BERTHY_API https://127.0.0.1:443/api/
+ENV VUE_APP_BERTHY_WEB_SOCKET wss://127.0.0.1:443/socket
 COPY package*.json ./
 RUN npm install
 COPY . .
